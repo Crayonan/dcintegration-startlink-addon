@@ -1,0 +1,6 @@
+name = "Link Modal Addon"
+version = "1.0.0"
+classPath = "com.gearbound.discordlink.LinkAddon"
+author = "Gearbound"
+description = "Adds modal-based linking via /startlink"
+APIVersion = 3

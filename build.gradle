@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.gearbound.discordlink'
+version = '1.0.0'
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.erdbeerbaerlp.de/repository/maven-public/" }
+}
+
+dependencies {
+    // Core DCIntegration dependency
+    compileOnly 'de.erdbeerbaerlp:dcintegration.common:3.0.7'
+
+    // Optional logging support
+    compileOnly 'org.apache.logging.log4j:log4j-api:2.17.1'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes(
+                // This is optional and unused by DCIntegration, but can help in debugging
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version
+        )
+    }
+
+    archiveBaseName.set('LinkAddon')
+    archiveVersion.set(version)
+    destinationDirectory.set(file("$buildDir/libs"))
+}
