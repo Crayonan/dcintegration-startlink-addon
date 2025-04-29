@@ -1,6 +1,6 @@
-name = "Link Modal Addon"
-version = "1.0.0"
+name = "Link Embed Addon"
+version = "1.4.0"
 classPath = "com.gearbound.discordlink.LinkAddon"
 author = "Gearbound"
-description = "Adds modal-based linking via /startlink"
+description = "Adds an embed via /linkembed with a button intended to open the linking modal directly." # Updated description
 APIVersion = 3
