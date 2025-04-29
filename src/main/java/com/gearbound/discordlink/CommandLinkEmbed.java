@@ -8,8 +8,6 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 import net.dv8tion.jda.api.requests.restaction.interactions.ReplyCallbackAction;
 
-import java.awt.*;
-
 public class CommandLinkEmbed extends DiscordCommand {
 
     public static final String BUTTON_ID = "start_link_via_button";
